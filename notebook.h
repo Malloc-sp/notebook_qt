@@ -2,6 +2,7 @@
 #define NOTEBOOK_H
 
 #include <QMainWindow>
+#include <QPushButton>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -16,6 +17,13 @@ class NoteBook : public QMainWindow
 public:
     NoteBook(QWidget *parent = nullptr);
     ~NoteBook();
+    void init();
+
+private slots:
+    void handleBtnOpen();
+    void handleBtnClose();
+    void handleBtnSave();
+    void handleBtnNew();
 
 private:
     Ui::NoteBook *ui;
